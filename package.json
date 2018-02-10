@@ -1,0 +1,7 @@
+{
+  "name": "qa-tests",
+  "dependencies": {},
+  "devDependencies": {
+    "protractor": "^5.3.0"
+  }
+}
