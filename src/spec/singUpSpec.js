@@ -1,6 +1,8 @@
 'use strict';
 
 var RegistrationForm = require('../page_object/registrationPageObject.js');
+var RandomNumberGenerator = require('../utils/randomNumberGenerator.js');
+var RandomStringGenerator = require('../utils/randomStringGenerator.js');
 
 describe('Kaboo signup', function () {
 
@@ -11,24 +13,27 @@ describe('Kaboo signup', function () {
     });
 
     it('should work fine', function () {
-        registrationForm.typeEmail('aaa@aaa.ae');
-        registrationForm.typeUsername('gsv5');
+        var randomNumber = RandomNumberGenerator(3);
+        var randomString = RandomStringGenerator(6);
+        console.log('The random number is ' + randomNumber);
+        registrationForm.typeEmail(randomNumber + '@test.test');
+        registrationForm.typeUsername('gsv' + randomNumber);
         registrationForm.typePassword('Testing1');
         registrationForm.repeatPassword('Testing1');
         registrationForm.acceptTC();
         registrationForm.nextStep();
         registrationForm.waitForSecondStep();
         expect(registrationForm.isSecondStepDisplayed()).toEqual(true);
-        registrationForm.typeFirstName('Testb');
-        registrationForm.typeLastName('Testb');
+        registrationForm.typeFirstName('Name' + randomString);
+        registrationForm.typeLastName('Lastname' + randomString);
         registrationForm.typeDay('1');
         registrationForm.typeMonth('1');
         registrationForm.typeYear('1990');
-        registrationForm.typeAddress('Testb');
-        registrationForm.typeCity('Testb');
-        registrationForm.typePostalCode('Testb');
+        registrationForm.typeAddress(randomString + ' street');
+        registrationForm.typeCity(randomString + ' polis');
+        registrationForm.typePostalCode(randomString);
         registrationForm.selectCountry('NO');
-        registrationForm.typePhoneNumber('111111113');
+        registrationForm.typePhoneNumber(RandomNumberGenerator(9));
         registrationForm.submit();
         registrationForm.waitForRegistrationCompletedPage();
         expect(registrationForm.isRegistrationCompletedPageDisplayed()).toEqual(true);
