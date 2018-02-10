@@ -1,0 +1,5 @@
+# User-specific stuff from JetBrains:
+.idea/*
+
+# Dependency directories
+node_modules
