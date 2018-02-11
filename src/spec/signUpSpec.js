@@ -51,6 +51,6 @@ describe('Kaboo Signup', function () {
         registrationForm.confirmRegistration();
 
         // Check if user is redirected to lobby once registration is confirmed
-        expect(lobby.isDisplayed()).toEqual(true);
+        expect(lobby.isContainerDisplayed()).toEqual(true);
     });
 });

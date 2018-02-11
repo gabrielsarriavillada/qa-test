@@ -28,7 +28,7 @@ var KabooLobby = function () {
      * Wait for lobby container to be visible, and then return if it is displayed.
      * @return {boolean} - True if lobby container is displayed
      */
-    this.isDisplayed = function () {
+    this.isContainerDisplayed = function () {
         this.waitForContainer();
         return container.isDisplayed();
     };

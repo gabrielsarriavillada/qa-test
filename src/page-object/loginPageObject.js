@@ -26,7 +26,7 @@ var LoginForm = function () {
      * Wait for login form container to be visible, and then return if it is displayed.
      * @return {boolean} - True if login form container is displayed
      */
-    this.isDisplayed = function () {
+    this.isContainerDisplayed = function () {
         this.waitForContainer();
         return container.isDisplayed();
     };

@@ -1,11 +1,13 @@
+var baseUrl = 'qatest.staging.kaboo.com';
+
 var Navigation = {
 
     /**
      * Navigate to url given path.
      * @param path - Path after domain.
-     * */
+     **/
     navigateToUrl : function (path) {
-        browser.get("http://qatest.staging.kaboo.com" + path);
+        browser.get('http://' + baseUrl + path);
     },
 
     /**
@@ -19,7 +21,7 @@ var Navigation = {
         browser.manage().deleteAllCookies();
 
         // Server authentication
-        browser.get("http://" + username + ":" + password + "@qatest.staging.kaboo.com");
+        browser.get('http://' + username + ':' + password + '@' + baseUrl);
     }
 };
 module.exports = Navigation;

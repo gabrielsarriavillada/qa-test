@@ -42,7 +42,7 @@ describe('Kaboo Login from login form', function () {
         loginForm.login();
 
         // Check lobby is displayed
-        expect(lobby.isDisplayed()).toEqual(true);
+        expect(lobby.isContainerDisplayed()).toEqual(true);
 
         // Check profile icon is displayed
         expect(lobby.isProfileIconDisplayed()).toEqual(true);
