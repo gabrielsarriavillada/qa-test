@@ -1,11 +1,25 @@
-/**
- * Navigate to given url using the credentials provided to server authentication.
- * @param path - Path after domain.
- * @param username - Username of credentials to authenticate into server.
- * @param password - Password of credentials to authenticate into server.
- */
-var NavigateToUrlWithCredentials = function (path, username, password) {
-    browser.get("http://" + username + ":" + password + "@qatest.staging.kaboo.com" + path);
-};
+var Navigation = {
 
-module.exports = NavigateToUrlWithCredentials;
+    /**
+     * Navigate to url given path.
+     * @param path - Path after domain.
+     * */
+    navigateToUrl : function (path) {
+        browser.get("http://qatest.staging.kaboo.com" + path);
+    },
+
+    /**
+     * Initialize browser, removing cookies and authenticating in server.
+     */
+    initialize : function () {
+        var username = 'kaboo';
+        var password = 'flappybird';
+
+        // Remove cookies
+        browser.manage().deleteAllCookies();
+
+        // Server authentication
+        browser.get("http://" + username + ":" + password + "@qatest.staging.kaboo.com");
+    }
+};
+module.exports = Navigation;

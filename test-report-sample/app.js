@@ -131,11 +131,11 @@ app.controller('ScreenshotReportController', function ($scope) {
 
     var results =[
     {
-        "description": "should work with valid user credentials|Kaboo Login",
+        "description": "should work with valid user credentials|Kaboo Login from lobby",
         "passed": true,
         "pending": false,
         "os": "Mac OS X",
-        "sessionId": "0c4c227da3981886eb5cb626b06ee911",
+        "sessionId": "c471ed8ba9ed0a6d928fb2fa6dc4a170",
         "browser": {
             "name": "chrome",
             "version": "63.0.3239.132"
@@ -146,50 +146,122 @@ app.controller('ScreenshotReportController', function ($scope) {
             {
                 "level": "SEVERE",
                 "message": "http://kaboo:flappybird@qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 997:18 \"ServiceWorker registration failed: \"",
-                "timestamp": 1518343418791,
-                "type": ""
-            },
-            {
-                "level": "SEVERE",
-                "message": "http://kaboo:flappybird@qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
-                "timestamp": 1518343419376,
-                "type": ""
-            },
-            {
-                "level": "SEVERE",
-                "message": "http://kaboo:flappybird@qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
-                "timestamp": 1518343419386,
+                "timestamp": 1518371093372,
                 "type": ""
             },
             {
                 "level": "WARNING",
-                "message": "http://kaboo:flappybird@qatest.staging.kaboo.com/en/lobby - This page includes a password or credit card input in a non-secure context. A warning has been added to the URL bar. For more information, see https://goo.gl/zmWq3m.",
-                "timestamp": 1518343419650,
+                "message": "deprecation - Subresource requests whose URLs contain embedded credentials (e.g. `https://user:pass@host/`) are blocked. See https://www.chromestatus.com/feature/5669008342777856 for more details.",
+                "timestamp": 1518371093634,
                 "type": ""
             },
             {
                 "level": "SEVERE",
-                "message": "http://kaboo:flappybird@qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
-                "timestamp": 1518343420276,
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 997:18 \"ServiceWorker registration failed: \"",
+                "timestamp": 1518371094002,
                 "type": ""
             },
             {
                 "level": "SEVERE",
-                "message": "http://kaboo:flappybird@qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
-                "timestamp": 1518343420276,
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
+                "timestamp": 1518371094474,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
+                "timestamp": 1518371094517,
+                "type": ""
+            },
+            {
+                "level": "WARNING",
+                "message": "http://qatest.staging.kaboo.com/en/lobby - This page includes a password or credit card input in a non-secure context. A warning has been added to the URL bar. For more information, see https://goo.gl/zmWq3m.",
+                "timestamp": 1518371094782,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
+                "timestamp": 1518371095238,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
+                "timestamp": 1518371095239,
                 "type": ""
             }
         ],
-        "screenShotFile": "0003001e-0023-0099-009c-004500c8001b.png",
-        "timestamp": 1518343416642,
-        "duration": 9959
+        "screenShotFile": "005b003a-0086-0095-00db-002a00bb004c.png",
+        "timestamp": 1518371091250,
+        "duration": 10660
+    },
+    {
+        "description": "should work with valid user credentials|Kaboo Login from login form",
+        "passed": true,
+        "pending": false,
+        "os": "Mac OS X",
+        "sessionId": "c471ed8ba9ed0a6d928fb2fa6dc4a170",
+        "browser": {
+            "name": "chrome",
+            "version": "63.0.3239.132"
+        },
+        "message": "Passed.",
+        "trace": "",
+        "browserLogs": [
+            {
+                "level": "SEVERE",
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 997:18 \"ServiceWorker registration failed: \"",
+                "timestamp": 1518371103917,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 997:18 \"ServiceWorker registration failed: \"",
+                "timestamp": 1518371104414,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
+                "timestamp": 1518371104886,
+                "type": ""
+            },
+            {
+                "level": "WARNING",
+                "message": "http://qatest.staging.kaboo.com/en/login - This page includes a password or credit card input in a non-secure context. A warning has been added to the URL bar. For more information, see https://goo.gl/zmWq3m.",
+                "timestamp": 1518371105071,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
+                "timestamp": 1518371110152,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
+                "timestamp": 1518371110355,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
+                "timestamp": 1518371110356,
+                "type": ""
+            }
+        ],
+        "screenShotFile": "004f0015-00fb-008a-006f-008d00c4002a.png",
+        "timestamp": 1518371103622,
+        "duration": 10387
     },
     {
         "description": "should work fine using valid data|Kaboo Signup",
         "passed": true,
         "pending": false,
         "os": "Mac OS X",
-        "sessionId": "0c4c227da3981886eb5cb626b06ee911",
+        "sessionId": "c471ed8ba9ed0a6d928fb2fa6dc4a170",
         "browser": {
             "name": "chrome",
             "version": "63.0.3239.132"
@@ -199,26 +271,50 @@ app.controller('ScreenshotReportController', function ($scope) {
         "browserLogs": [
             {
                 "level": "SEVERE",
-                "message": "http://kaboo:flappybird@qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 997:18 \"ServiceWorker registration failed: \"",
-                "timestamp": 1518343428944,
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 997:18 \"ServiceWorker registration failed: \"",
+                "timestamp": 1518371115921,
                 "type": ""
             },
             {
                 "level": "SEVERE",
-                "message": "http://kaboo:flappybird@qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
-                "timestamp": 1518343429724,
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 997:18 \"ServiceWorker registration failed: \"",
+                "timestamp": 1518371116365,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
+                "timestamp": 1518371116785,
                 "type": ""
             },
             {
                 "level": "WARNING",
-                "message": "http://kaboo:flappybird@qatest.staging.kaboo.com/en/signup - This page includes a password or credit card input in a non-secure context. A warning has been added to the URL bar. For more information, see https://goo.gl/zmWq3m.",
-                "timestamp": 1518343429997,
+                "message": "http://qatest.staging.kaboo.com/en/signup - This page includes a password or credit card input in a non-secure context. A warning has been added to the URL bar. For more information, see https://goo.gl/zmWq3m.",
+                "timestamp": 1518371117037,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
+                "timestamp": 1518371136231,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
+                "timestamp": 1518371136436,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "http://qatest.staging.kaboo.com/js/kaboo-bdf5e495b4.min.js 8122:14 \"(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.\"",
+                "timestamp": 1518371136436,
                 "type": ""
             }
         ],
-        "screenShotFile": "005d00ca-0047-00de-00ec-004200d60046.png",
-        "timestamp": 1518343428492,
-        "duration": 20554
+        "screenShotFile": "007900f7-006d-00f6-00b7-0055007a000e.png",
+        "timestamp": 1518371115641,
+        "duration": 23870
     }
 ];
 
