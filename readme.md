@@ -16,5 +16,5 @@ find them in the directory **src/utils**.
 
 The result of the last run tests is available in a report generated in **test-report/report.html**. I have used 
 `protractor-beautiful-reporter` to do that. This directory (and node_modules) have been included in **.gitignore**, so 
-it is not available in the repository. On the other hand, I have added a *test-report-sample** with one of the reports 
-generated once tests are run with `protractor conf.js`.
+it is not available in the repository. On the other hand, I have added a **test-report-sample** with one of the reports 
+generated once tests are run with `protractor conf.js`, so you can check how it looks.

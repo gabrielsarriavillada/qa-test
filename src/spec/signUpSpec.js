@@ -6,7 +6,6 @@ var RandomGenerator = require('../utils/randomGenerator.js');
 var Navigation = require('../utils/navigation.js');
 
 describe('Kaboo Signup', function () {
-
     var registrationForm = new RegistrationForm();
     var lobby = new Lobby();
 

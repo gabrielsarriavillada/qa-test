@@ -26,10 +26,8 @@ describe('Kaboo Login from lobby', function () {
 });
 
 describe('Kaboo Login from login form', function () {
-
     var loginForm = new LoginForm();
     var lobby = new Lobby();
-    var home = new Homepage();
 
     beforeEach(function () {
         Navigation.initialize(); // Initialize browser
@@ -50,4 +48,3 @@ describe('Kaboo Login from login form', function () {
         expect(lobby.isProfileIconDisplayed()).toEqual(true);
     });
 });
-
