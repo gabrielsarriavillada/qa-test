@@ -4,7 +4,7 @@ As a user
 In order to have a record of my rewards
 I want to have a Json with my rewards and all their details.
 
-Scenario 1: Only "userName" paremeter could be passed in method to get reward history
+Scenario 1: Only "userName" parameter could be passed in method to get reward history
 Given the method '/igc/betspin/rewards/history'
 Then 'userName' is accepted as parameter in the method
 And no other parameter is accepted in the method
@@ -14,7 +14,7 @@ Given the method '/igc/betspin/rewards/history'
 And an user with some claimed unique tokens
 When the method is used with username as parameter
 Then a Json object is returned for the user
-And Json is an array of unique tokens
+And the Json is an array of unique tokens
 
 Scenario 3: Correct unique tokens should be part of the Json
 Given an user with some claimed unique tokens
@@ -33,7 +33,7 @@ And one of the unique tokens has been claimed twice
 When a Json object is returned for the user
 Then the unique token claimed twice is available in the Json as sub-array objects
 
-Scenario Outline: Sub-array objects should contain correct information about unique tokens
+Scenario Outline 5: Sub-array objects should contain correct information about unique tokens
 Given an user with some unique tokens
 When a Json object is returned for the user
 Then every unique token contains '<information>'
@@ -44,3 +44,9 @@ Examples:
 | info         |
 | reason       |
 | expiry date  |
+
+Scenario 6: Unique tokens are available on chronological order in the Json
+Given an user with some unique tokens
+When a Json object is returned for the user
+Then array elements are returned in chronological order
+And subarray elements are returned in chronological order

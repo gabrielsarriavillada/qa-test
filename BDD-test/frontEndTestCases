@@ -16,12 +16,12 @@ Given an user without any reward
 When user is in Freebies Vault Section
 Then "Your History" section is not displayed
 
+// It has been assumed that there is a thumbnail assigned to every reward.
+// This is not specified in the specifications.
 Scenario 3: Every reward should be presented as a thumbnail in "Your History" section
 Given an user with some rewards
 When user is in Freebies Vault Section
 Then there is a thumbnail per reward
-// It has been assumed that there is a thumbnail assigned to every reward.
-// This is not specified in the specifications.
 And the thumbnail representing every reward is the expected one
 
 // It has been assumed that rewards token are displayed following the order how user has obtained them.
@@ -31,7 +31,7 @@ Given an user with 8 or less rewards
 When user is in Freebies Vault Section
 Then reward tokens are displayed from the most recent one to the oldest one
 
-Scenario 5: 8 reward token should be displayed in "Your History" section if user has more than 8 rewards
+Scenario 5: 8 reward tokens should be displayed in "Your History" section if user has 8 rewards
 Given an user with 8 rewards
 When user is in Freebies Vault Section
 Then there are 8 thumbnails displayed
@@ -75,22 +75,7 @@ Then "free spin" icon is displayed in reward tokens with free spins
 
 // This scenario is based on the design.
 // It has been assumed that reward tokens without "free spin" don't have free spins.
-Scenario 10: Rewards containing without free spins should not have "free spin" icon
+Scenario 11: Rewards containing without free spins should not have "free spin" icon
 Given an user with some rewards without free spins
 When user is in Freebies Vault Section
 Then "free spin" icon is not displayed in reward tokens without free spins
-
-// It has been assumed that expired rewards are not displayed in "Your History" section
-Scenario 11: Expired rewards should not be displayed in "Your History" section
-Given an user with some rewards
-And some of the rewards are expired
-When user is in Freebies Vault Section
-Then "Your History" section is displayed
-And expired reward tokens are not displayed
-
-// It has been assumed that expired rewards are not displayed in "Your History" section
-Scenario 12: "Your History" section should not be available if user only has expired rewards
-Given an user with some rewards
-And all of the rewards are expired
-When user is in Freebies Vault Section
-Then "Your History" section is not displayed
