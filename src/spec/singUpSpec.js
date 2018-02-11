@@ -2,8 +2,7 @@
 
 var RegistrationForm = require('../page-object/registrationPageObject.js');
 var Lobby = require('../page-object/lobbyPageObject.js');
-var RandomNumberGenerator = require('../utils/randomNumberGenerator.js');
-var RandomStringGenerator = require('../utils/randomStringGenerator.js');
+var RandomGenerator = require('../utils/randomGenerator.js');
 var Navigation = require('../utils/navigation.js');
 
 describe('Kaboo Signup', function () {
@@ -18,8 +17,8 @@ describe('Kaboo Signup', function () {
 
     it('should work fine using valid data', function () {
         // Generate random strings to be used during registration process
-        var randomNumber = RandomNumberGenerator(3);
-        var randomString = RandomStringGenerator(6);
+        var randomNumber = RandomGenerator.number(3);
+        var randomString = RandomGenerator.string(6);
 
         // Introduce data for first step of registration
         registrationForm.typeEmail(randomNumber + '@test.test');
@@ -43,7 +42,7 @@ describe('Kaboo Signup', function () {
         registrationForm.typeCity(randomString + ' Polis');
         registrationForm.typePostalCode(randomString);
         registrationForm.selectCountry('NO');
-        registrationForm.typePhoneNumber(RandomNumberGenerator(9));
+        registrationForm.typePhoneNumber(RandomGenerator.number(9));
 
         registrationForm.submit();
 
