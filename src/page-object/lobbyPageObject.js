@@ -32,8 +32,8 @@ var KabooLobby = function () {
     this.waitForProfile = function () {
         return browser.driver.wait(function () {
             browser.wait(protractor.ExpectedConditions.visibilityOf(profileIcon),
-                10000,
-                'Login has not been performed after 10 seconds'
+                5000,
+                'Login has not been performed after 5 seconds'
             );
             return profileIcon;
         });

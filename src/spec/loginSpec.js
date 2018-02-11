@@ -1,6 +1,6 @@
 'use strict';
 
-var Lobby = require('../page_object/lobbyPageObject.js');
+var Lobby = require('../page-object/lobbyPageObject.js');
 
 describe('Kaboo Login', function () {
 
