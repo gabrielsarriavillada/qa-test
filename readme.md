@@ -1,10 +1,10 @@
-### Exercise 1
+## Exercise 1
 You can find the test cases written in plain English, following BDD philosophy, in the directory **BDD-test**. I have 
 divided them in 2 files: **frontEndTestCases** and **backEndTestCases**.
 
 I have assumed some functionality not specified in the requirements/design, based in common sense and my experience 
 in the business.
-### Exercise 2
+## Exercise 2
 I have created a structure of files with selectors and functions grouped by pages in the folder **src/page-object**, 
 creating a POM that can be used to write the tests.
 
@@ -19,7 +19,7 @@ The result of the last run tests is available in a report generated in **test-re
 it is not available in the repository. It will be automatically generated once tests are run by `protractor conf.js`.
 
 I have added a scenario in **signUpSpec.js** that fails due to a possible bug:
-#####Steps To Reproduce
+### Steps To Reproduce
 1. Go to registration form
 2. Fill all the fields with valid data in step 1
 3. Go to step 2
@@ -28,10 +28,10 @@ I have added a scenario in **signUpSpec.js** that fails due to a possible bug:
 6. Replace phone number by a phone number that has not been used before
 7. Submit registration
 8. Confirm registration
-#####Expected Results
+### Expected Results
 5. Notification should appear with error in registration
 8. Notification should disappear after confirming correct registration
-#####Actual Results
+### Actual Results
 5. Notification appears with error in registration (correct)
 8. Notification is still displayed after confirming correct registration (wrong)
 
