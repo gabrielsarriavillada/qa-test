@@ -24,6 +24,7 @@ var RegistrationForm = function () {
     var confirmationButton = element(by.css('button[ui-sref="lobby"]'));
     var country = element(by.id('countrySelector'));
     var countryList = element.all(by.css('a.e-flag'));
+    var notification = element(by.css('div.m-site-notification__wrapper'));
 
     /**
      * Enter given keys to e-mail input field.
@@ -173,13 +174,20 @@ var RegistrationForm = function () {
     };
 
     /**
+     * Clear phone number input field.
+     */
+    this.clearPhoneNumber = function () {
+        phoneNumber.clear();
+    };
+
+    /**
      * Wait for e-mail sent box to be visible.
      */
     this.waitForRegistrationCompletedPage = function () {
         return browser.driver.wait(function () {
             browser.wait(protractor.ExpectedConditions.visibilityOf(emailSentBox),
-                10000,
-                'Login has not been performed after 10 seconds'
+                5000,
+                'Registration completed page has not appear after 10 seconds'
             );
             return emailSentBox;
         });
@@ -213,6 +221,28 @@ var RegistrationForm = function () {
             });
         }).first().click();
     };
+
+    /**
+     * Wait for notification to be visible.
+     */
+    this.waitForNotification = function () {
+        return browser.driver.wait(function () {
+            browser.wait(protractor.ExpectedConditions.visibilityOf(notification),
+                5000,
+                'Notification has not appeared in 5 seconds'
+            );
+            return notification;
+        });
+    };
+
+    /**
+     * Wait for notification to be visible, and then return if it is displayed.
+     * @return {boolean} - True if notification is displayed
+     */
+    this.isNotificationDisplayed = function () {
+        this.waitForNotification();
+        return notification.isDisplayed();
+    }
 };
 
 module.exports = RegistrationForm;

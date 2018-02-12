@@ -53,4 +53,58 @@ describe('Kaboo Signup', function () {
         // Check if user is redirected to lobby once registration is confirmed
         expect(lobby.isContainerDisplayed()).toEqual(true);
     });
+
+    it('Should highlight error with registration', function () {
+        // Generate random strings to be used during registration process
+        var randomNumber = RandomGenerator.number(3);
+        var randomString = RandomGenerator.string(6);
+
+        // Introduce data for first step of registration
+        registrationForm.typeEmail(randomNumber + '@test.test');
+        registrationForm.typeUsername('gsv' + randomNumber);
+        registrationForm.typePassword('Testing1');
+        registrationForm.repeatPassword('Testing1');
+        registrationForm.acceptTC();
+
+        registrationForm.nextStep();
+
+        // Check if user is redirected to second step of registration
+        expect(registrationForm.isSecondStepDisplayed()).toEqual(true);
+
+        // Introduce data for second step of registration
+        registrationForm.typeFirstName('Name' + randomString);
+        registrationForm.typeLastName('Lastname' + randomString);
+        registrationForm.typeDay('1');
+        registrationForm.typeMonth('1');
+        registrationForm.typeYear('1990');
+        registrationForm.typeAddress(randomString + ' Street');
+        registrationForm.typeCity(randomString + ' Polis');
+        registrationForm.typePostalCode(randomString);
+        registrationForm.selectCountry('NO');
+
+        // Introduce phone number already used to register an account
+        registrationForm.typePhoneNumber('832019232');
+
+        registrationForm.submit();
+
+        // Check if notification is displayed after submit registration
+        expect(registrationForm.isNotificationDisplayed()).toEqual(true);
+
+        // Introduce new random phone number
+        registrationForm.clearPhoneNumber();
+        registrationForm.typePhoneNumber(RandomGenerator.number(9));
+
+        registrationForm.submit();
+
+        // Check if user is redirected to confirmation of registration page
+        expect(registrationForm.isRegistrationCompletedPageDisplayed()).toEqual(true);
+
+        registrationForm.confirmRegistration();
+
+        // Check if user is redirected to lobby once registration is confirmed
+        expect(lobby.isContainerDisplayed()).toEqual(true);
+
+        // Check if notification is not longer displayed after confirm registration
+        expect(registrationForm.isNotificationDisplayed()).toEqual(false);
+    })
 });

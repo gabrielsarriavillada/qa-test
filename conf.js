@@ -8,6 +8,7 @@ exports.config = {
         'browserName': 'chrome'
     },
 
+    // It runs all the specs in this src/spec directory
     specs: ['src/spec/*.js'],
 
     onPrepare: function() {
