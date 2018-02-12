@@ -54,7 +54,7 @@ describe('Kaboo Signup', function () {
         expect(lobby.isContainerDisplayed()).toEqual(true);
     });
 
-    it('Should highlight error with registration', function () {
+    it('Should remove notification once registration has been completed', function () {
         // Generate random strings to be used during registration process
         var randomNumber = RandomGenerator.number(3);
         var randomString = RandomGenerator.string(6);
